@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>forecasted data</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 450PX; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul li{
+  list-style-type: none;
+  padding: 20PX;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 450PX; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+table {
+			margin: 0 auto;
+			font-size: large;
+			border: 1px solid black;
+		}
+
+		h1 {
+			text-align: center;
+			color: #006600;
+			font-size: xx-large;
+			font-family: 'Gill Sans', 'Gill Sans MT',
+			' Calibri', 'Trebuchet MS', 'sans-serif';
+		}
+
+		td {
+			background-color: #E4F5D4;
+			border: 1px solid black;
+		}
+
+		th,
+		td {
+			font-weight: bold;
+			border: 1px solid black;
+			padding: 10px;
+			text-align: center;
+		}
+
+		td {
+			font-weight: lighter;
+		}
+</style>
+</head>
+<body>
+
+
+<header>
+  <h2>SMART HYDRO-INFORMATICS WATER DISTRIBUTION SYSTEM</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">DASHBOARD</a></li>
+      <li><a href="#">GRAPHS</a></li>
+      <li><a href="#">SETTINGS</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <div id="wrapper">
+        <form method="post" action="import_file.php" enctype="multipart/form-data">
+            <input type="file" name="file"/>
+            <input type="submit" name="submit_file" value="Submit"/>
+        </form>
+
+    </div>
+   </article>
+</section>
+
+<footer>
+  <p>Water availability is our priority</p>
+</footer>
+
+</body>
+</html>
+
